@@ -43,8 +43,12 @@ namespace DemoWpf
                     case "8":
                     case "9":
                     case "10":
-
-
+                    case "11":
+                    case "12":
+                    case "13":
+                    case "14":
+                    case "15":
+                    case "16":
                         screen.Text += knapp.Content;
                         break;
                     default:
@@ -55,24 +59,10 @@ namespace DemoWpf
 
         }
 
-        private void button_dot_text(object sender, RoutedEventArgs e)
-        {
-            if (sender is Button)
-            {
-                screen.Text += ".";
-            }
-
+        
 
         }
     }
 
-    private void button_clear_text(object sender, RoutedEventArgs e)
-    {
-        if (sender is Button)
-        {
-            screen.Text += String.Empty;
-        }
-    }
-}
     
 
