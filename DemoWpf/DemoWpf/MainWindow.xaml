@@ -32,12 +32,12 @@
         <Button Click="button_click" Name="Button_eight" Grid.Column="3" Grid.Row="2" Content="8" FontSize="40"></Button>
         <Button Click="button_click" Name="Button_nine" Grid.Column="0" Grid.Row="3" Content="9" FontSize="40"></Button>
         <Button Click="button_click" Name="Button_dot" Grid.Column="4" Grid.Row="3" Content="." FontSize="40"></Button>
-        <Button Click="button_click" Name="Button_clear" Grid.Column="2" Grid.Row="3" Content="Clear" FontSize="40"></Button>
-        <Button Click="button_click" Name="Button_equals" Grid.Column="1" Grid.Row="3" Content="=" FontSize="40"></Button>
-        <Button Click="button_plus_click" Name="Button_plus" Grid.Column="0" Grid.Row="4" Content="+" FontSize="40"></Button>
-        <Button Click="button_click" Name="Button_minus" Grid.Column="1" Grid.Row="4" Content="-" FontSize="40"></Button>
-        <Button Click="button_click" Name="Button_times" Grid.Column="2" Grid.Row="4" Content="*" FontSize="40"></Button>
-        <Button Click="button_click" Name="Button_division" Grid.Column="3" Grid.Row="4" Content="/" FontSize="40"></Button>
+        <Button Click="button_clearing" Name="Button_clear" Grid.Column="2" Grid.Row="3" Content="Clear" FontSize="40"></Button>
+        <Button Click="button_result" Name="Button_results" Grid.Column="1" Grid.Row="3" Content="=" FontSize="40"></Button>
+        <Button Click="button_variables_click" Name="Button_plus" Grid.Column="0" Grid.Row="4" Content="+" FontSize="40"></Button>
+        <Button Click="button_variables_click" Name="Button_minus" Grid.Column="1" Grid.Row="4" Content="-" FontSize="40"></Button>
+        <Button Click="button_variables_click" Name="Button_times" Grid.Column="2" Grid.Row="4" Content="*" FontSize="40"></Button>
+        <Button Click="button_variables_click" Name="Button_division" Grid.Column="3" Grid.Row="4" Content="/" FontSize="40"></Button>
 
 
 
