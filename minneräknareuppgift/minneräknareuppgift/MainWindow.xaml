@@ -1,0 +1,51 @@
+﻿<Window x:Class="minneräknareuppgift.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:minneräknareuppgift"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Name="screen" FontSize="25" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" Background="AliceBlue"></TextBlock>
+        <Button Click="button_click" Name="Button_One" Grid.Column="0" Grid.Row="1" Content="1" FontSize="40"></Button>
+        <Button Click="button_click" Name="Button_two" Grid.Column="1" Grid.Row="1" Content="2" FontSize="40"></Button>
+        <Button Click="button_click" Name="Button_three" Grid.Column="2" Grid.Row="1" Content="3" FontSize="40"></Button>
+        <Button Click="button_click" Name="Button_four" Grid.Column="3" Grid.Row="1" Content="4" FontSize="40"></Button>
+        <Button Click="button_click" Name="Button_five" Grid.Column="0" Grid.Row="2" Content="5" FontSize="40"></Button>
+        <Button Click="button_click" Name="Button_six" Grid.Column="1" Grid.Row="2" Content="6" FontSize="40"></Button>
+        <Button Click="button_click" Name="Button_seven" Grid.Column="2" Grid.Row="2" Content="7" FontSize="40"></Button>
+        <Button Click="button_click" Name="Button_eight" Grid.Column="3" Grid.Row="2" Content="8" FontSize="40"></Button>
+        <Button Click="button_click" Name="Button_nine" Grid.Column="0" Grid.Row="3" Content="9" FontSize="40"></Button>
+        <Button Click="button_dot_click" Name="Button_dot" Grid.Column="4" Grid.Row="3" Content="." FontSize="40"></Button>
+        <Button Click="button_clearing" Name="Button_clear" Grid.Column="2" Grid.Row="3" Content="Clear" FontSize="40"></Button>
+        <Button Click="button_result" Name="Button_results" Grid.Column="1" Grid.Row="3" Content="=" FontSize="40"></Button>
+        <Button Click="button_variables_click_plus" Name="Button_plus" Grid.Column="0" Grid.Row="4" Content="+" FontSize="40"></Button>
+        <Button Click="button_variables_click_minus" Name="Button_minus" Grid.Column="1" Grid.Row="4" Content="-" FontSize="40"></Button>
+        <Button Click="button_variables_click_times" Name="Button_times" Grid.Column="2" Grid.Row="4" Content="*" FontSize="40"></Button>
+        <Button Click="button_variables_click_division" Name="Button_division" Grid.Column="3" Grid.Row="4" Content="/" FontSize="40"></Button>
+        <Button Click="button_variables_click_square" Name="Button_square" Grid.Column="0" Grid.Row="5" Content="√" FontSize="40"></Button>
+        <Button Click="button_variables_click_elevated" Name="Button_elevated" Grid.Column="1" Grid.Row="5" Content="^" FontSize="40"></Button>
+        <Button Click="button_empty" Name="empty_button" Grid.Column="1" Grid.Row="5" Content="^" FontSize="40"></Button>
+
+
+
+
+
+    </Grid>
+</Window>
