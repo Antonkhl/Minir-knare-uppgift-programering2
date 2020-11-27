@@ -61,7 +61,7 @@ namespace minneräknareuppgift
 
         private void button_variables_click_plus(object sender, RoutedEventArgs e)
         {
-            if (!screen.Text.Contains('+') && !String.IsNullOrEmpty(screen.Text) && !screen.Text.Contains('-') && !screen.Text.Contains('/') && !screen.Text.Contains('*'))
+            if (!screen.Text.Contains('+') && !String.IsNullOrEmpty(screen.Text) && !screen.Text.Contains('-') && !screen.Text.Contains('/') && !screen.Text.Contains('*') && !screen.Text.Contains('√') && !screen.Text.Contains('^'))
             {
                 screen.Text += "+";
             }
@@ -69,7 +69,7 @@ namespace minneräknareuppgift
 
         private void button_variables_click_minus(object sender, RoutedEventArgs e)
         {
-            if (!screen.Text.Contains('+') && !String.IsNullOrEmpty(screen.Text) && !screen.Text.Contains('-') && !screen.Text.Contains('/') && !screen.Text.Contains('*'))
+            if (!screen.Text.Contains('+') && !String.IsNullOrEmpty(screen.Text) && !screen.Text.Contains('-') && !screen.Text.Contains('/') && !screen.Text.Contains('*') && !screen.Text.Contains('√') && !screen.Text.Contains('^'))
             {
                 screen.Text += "-";
             }
@@ -77,7 +77,7 @@ namespace minneräknareuppgift
 
         private void button_variables_click_times(object sender, RoutedEventArgs e)
         {
-            if (!screen.Text.Contains('+') && !String.IsNullOrEmpty(screen.Text) && !screen.Text.Contains('-') && !screen.Text.Contains('/') && !screen.Text.Contains('*'))
+            if (!screen.Text.Contains('+') && !String.IsNullOrEmpty(screen.Text) && !screen.Text.Contains('-') && !screen.Text.Contains('/') && !screen.Text.Contains('*') && !screen.Text.Contains('√') && !screen.Text.Contains('^'))
             {
                 screen.Text += "*";
             }
@@ -85,9 +85,25 @@ namespace minneräknareuppgift
 
         private void button_variables_click_division(object sender, RoutedEventArgs e)
         {
-            if (!screen.Text.Contains('+') && !String.IsNullOrEmpty(screen.Text) && !screen.Text.Contains('-') && !screen.Text.Contains('/') && !screen.Text.Contains('*'))
+            if (!screen.Text.Contains('+') && !String.IsNullOrEmpty(screen.Text) && !screen.Text.Contains('-') && !screen.Text.Contains('/') && !screen.Text.Contains('*') && !screen.Text.Contains('√') && !screen.Text.Contains('^'))
             {
                 screen.Text += "/";
+            }
+        }
+
+        private void button_variables_click_square(object sender, RoutedEventArgs e)
+        {
+            if (!screen.Text.Contains('+') && !screen.Text.Contains('-') && !screen.Text.Contains('/') && !screen.Text.Contains('*') && !screen.Text.Contains('√') && !screen.Text.Contains('^')) 
+            {
+                screen.Text += "√";
+            }
+        }
+
+        private void button_variables_click_elevated(object sender, RoutedEventArgs e)
+        {
+            if (!screen.Text.Contains('+') && !String.IsNullOrEmpty(screen.Text) && !screen.Text.Contains('-') && !screen.Text.Contains('/') && !screen.Text.Contains('*') && !screen.Text.Contains('√') && !screen.Text.Contains('^'))
+            {
+                screen.Text += "^";
             }
         }
 
@@ -109,20 +125,30 @@ namespace minneräknareuppgift
                 indexNumber = screen.Text.IndexOf("-");
             }
 
-            if (screen.Text.Contains("-"))
-            {
-                indexNumber = screen.Text.IndexOf("-");
-            }
 
             if (screen.Text.Contains("*"))
             {
                 indexNumber = screen.Text.IndexOf("*");
             }
 
-
             if (screen.Text.Contains("/"))
             {
                 indexNumber = screen.Text.IndexOf("/");
+            }
+
+            if (screen.Text.Contains("√"))
+            {
+                double number;
+                var isDouble = double.TryParse(this.screen.Text, out number);
+                if (isDouble)
+                {
+
+                }
+            }
+
+            if (screen.Text.Contains("^"))
+            {
+                indexNumber = screen.Text.IndexOf("^");
             }
 
             divisonDefiniton = screen.Text.Substring(indexNumber, 1);
@@ -149,6 +175,16 @@ namespace minneräknareuppgift
                 screen.Text += "=" + (firstNumber / SecondNumber);
             }
 
+            if (divisonDefiniton == "√")
+            {
+                screen.Text += "=" + (Math.Sqrt(firstNumber));
+            }
+
+            if (divisonDefiniton == "^")
+            {
+                screen.Text += "=" + (Math.Pow(firstNumber,SecondNumber));
+            }
+
 
         }
 
@@ -164,6 +200,11 @@ namespace minneräknareuppgift
                 screen.Text += ".";
             }
             
+
+        }
+
+        private void button_empty(object sender, RoutedEventArgs e)
+        {
 
         }
 
